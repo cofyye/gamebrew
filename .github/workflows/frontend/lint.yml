@@ -1,0 +1,37 @@
+name: Lint
+on:
+  push:
+    paths:
+      - "frontend/**"
+      - ".github/workflows/frontend/*.yml"
+    branches:
+      - main
+  pull_request:
+    paths:
+      - "frontend/**"
+      - ".github/workflows/frontend/*.yml"
+    branches:
+      - main
+
+jobs:
+  run-linters:
+    name: Run Linters
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Run Prettier
+        run: npm run prettier-check
