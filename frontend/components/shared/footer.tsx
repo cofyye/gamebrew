@@ -9,7 +9,7 @@ export function Footer() {
         target="_blank"
         rel="noopener noreferrer">
         Powered by{" "}
-        <span className="font-semibold">Vercel</span>
+        <span className="font-semibold">Vercel or COFYYE????</span>
       </a>
       </footer>
   )
