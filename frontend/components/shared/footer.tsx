@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 export function Footer() {
   return (
@@ -8,9 +8,8 @@ export function Footer() {
         href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
         target="_blank"
         rel="noopener noreferrer">
-        Powered by{" "}
-        <span className="font-semibold">Vercel</span>
+        Powered by <span className="font-semibold">Vercel or COFYYE????</span>
       </a>
-      </footer>
-  )
+    </footer>
+  );
 }

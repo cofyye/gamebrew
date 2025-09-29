@@ -17,6 +17,9 @@ jobs:
   run-linters:
     name: Run Linters
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: "frontend"
 
     steps:
       - name: Checkout repository
@@ -28,7 +31,7 @@ jobs:
           node-version: "22"
 
       - name: Install dependencies
-        run: cd frontend && npm install
+        run: npm install
 
       - name: Run ESLint
         run: npm run lint
